@@ -1,15 +1,12 @@
-setInterval(()=>{
-let currenTime=new Date();
-let hrs=document.getElementById("hrs");
-let min=document.getElementById("min");
-let sec=document.getElementById("sec");
-let hrsfix,minfix,secfix;
-if(currenTime.getHours()>12){
-    hrsfix=currenTime.getHours()-12;
-}
+setInterval(() => {
+    const currenTime = new Date();
+    let hrs = document.getElementById("hrs");
+    let min = document.getElementById("min");
+    let sec = document.getElementById("sec");
 
-hrs.innerHTML=(hrsfix<10?"0":"")+hrsfix;
-min.innerHTML=(currenTime.getMinutes()<10?"0":"")+currenTime.getMinutes();
-sec.innerHTML=(currenTime.getSeconds()<10?"0":"")+currenTime.getSeconds();
-
-},1000)
+    let hour = currenTime.getHours();
+    let hrsfix = hour > 12 ? hour - 12 : (hour === 0 ? 12 : hour); // 12-hour format
+    hrs.innerHTML = (hrsfix < 10 ? "0" : "") + hrsfix;
+    min.innerHTML = (currenTime.getMinutes() < 10 ? "0" : "") + currenTime.getMinutes();
+    sec.innerHTML = (currenTime.getSeconds() < 10 ? "0" : "") + currenTime.getSeconds();
+}, 1000);
