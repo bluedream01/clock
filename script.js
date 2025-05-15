@@ -7,6 +7,9 @@ let hrsfix,minfix,secfix;
 if(currenTime.getHours()>12){
     hrsfix=currenTime.getHours()-12;
 }
+else{
+    hrsfix=currenTime.getHours();
+}
 
 hrs.innerHTML=(hrsfix<10?"0":"")+hrsfix;
 min.innerHTML=(currenTime.getMinutes()<10?"0":"")+currenTime.getMinutes();
