@@ -81,3 +81,22 @@
 #sec::after{
     content:'SEC';
 }
+@media only screen and (max-width: 900px) {
+    .container{
+    width:180px;
+    height:500px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    
+
+
+}
+    
+ .clock{
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+ }
+}
